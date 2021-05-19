@@ -24,10 +24,11 @@ class DatabasePool:
     print("User",Settings.user)                                    
     print("Password",Settings.password)  
 
-    # @classmethod
-    # def getConnection(cls):
-    #     dbConn = cls.connection_pool.get_connection()
-    #     return dbConn
+    @classmethod
+    def getConnection(cls):
+        # dbConn = cls.connection_pool.get_connection()
+        # return dbConn
+        return ""
 
 
 '''
