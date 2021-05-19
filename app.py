@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask,jsonify
 from mysql.connector import pooling
 from config.Settings import Settings
 
@@ -61,6 +61,13 @@ def validate2():
     sql="select * from user"
     cursor.execute(sql)
     users = cursor.fetchall()
+    try:
+        jsonUsers=users
+        jsonUsers={"Users":jsonUsers}
+        return jsonify(jsonUsers)
+    except Exception as err:
+        print(err)
+        return {},500
 
     # dbConn.close()
     # host='localhost'
