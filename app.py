@@ -28,18 +28,19 @@ def validate():
     #     result = "invalid email"
 
     #password had to be converted to byte array
-    password = b"12345678"
-    # encode()
-    hashed = bcrypt.hashpw(password, bcrypt.gensalt())
-    print("hadhed",hashed)
-    print("salt",bcrypt.gensalt())
-    result = "didnt match"
-    if bcrypt.checkpw(password,hashed):
-        print("it matches")
-        result = "it matched"
-    else:
-        print("didnt match")  
-        result = "it didnt match"
+    # password = b"12345678"
+    # # encode()
+    # hashed = bcrypt.hashpw(password, bcrypt.gensalt())
+    # print("hadhed",hashed)
+    # print("salt",bcrypt.gensalt())
+    # result = "didnt match"
+    # if bcrypt.checkpw(password,hashed):
+    #     print("it matches")
+    #     result = "it matched"
+    # else:
+    #     print("didnt match")  
+    #     result = "it didnt match"
+    result = "hello world!"
     return result
 
 @app.route('/users/<int:userid>')
