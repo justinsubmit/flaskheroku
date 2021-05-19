@@ -14,7 +14,7 @@ class DatabasePool:
     #                                               password='Singapore1')
 
     connection_pool = pooling.MySQLConnectionPool(pool_name="ws_pool",
-                                                  pool_size=5,
+                                                  pool_size=20,
                                                   host=Settings.host,
                                                   database=Settings.database,
                                                   user=Settings.user,
