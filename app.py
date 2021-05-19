@@ -1,6 +1,6 @@
 from flask import Flask,jsonify,request,g,render_template
 import re
-import bcrypt
+# import bcrypt
 
 from flask_cors import CORS
 from model.User import User
@@ -8,7 +8,7 @@ from model.User import User
 
 # from model.Furniture import Furniture
 
-from validation.Validator import *
+#from validation.Validator import *
 
 app = Flask(__name__)
 

@@ -6,7 +6,7 @@ class Settings:
     # host='localhost'
     # database='furniture'
     # user='root'
-    # password='root'
+    # password='Singapore1'
 
     #Production
     host=os.environ['HOST2']
