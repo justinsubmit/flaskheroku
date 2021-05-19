@@ -15,5 +15,5 @@ class Settings:
     password=os.environ['PASSWORD']
     print("host",host)
     print("database",database)
-    print("username",username)
+    print("username",user)
     print("password",password)
