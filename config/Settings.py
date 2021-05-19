@@ -9,10 +9,10 @@ class Settings:
     # password='root'
 
     #Production
-    host=os.environ['HOST']
-    database=os.environ['DATABASE']
-    user=os.environ['USERNAME']
-    password=os.environ['PASSWORD']
+    host=os.environ['HOST2']
+    database=os.environ['DATABASE2']
+    user=os.environ['USERNAME2']
+    password=os.environ['PASSWORD2']
     print("host",host)
     print("database",database)
     print("username",user)
