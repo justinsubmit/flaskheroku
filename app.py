@@ -3,7 +3,7 @@ import re
 import bcrypt
 
 from flask_cors import CORS
-# from model.User import User
+from model.User import User
 # from model.Category import Category
 
 # from model.Furniture import Furniture
