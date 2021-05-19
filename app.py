@@ -35,7 +35,7 @@ def validate():
     # database=os.environ['DATABASE2']
     # user=os.environ['USERNAME2']
     # password=os.environ['PASSWORD2']
-    dbConn.close()
+    # dbConn.close()
     return "hello"
 
 
