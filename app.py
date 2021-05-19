@@ -62,7 +62,7 @@ def validate2():
     cursor.execute(sql)
     users = cursor.fetchall()
 
-    dbConn.close()
+    # dbConn.close()
     # host='localhost'
     # database='furniture'
     # user='root'
