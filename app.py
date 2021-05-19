@@ -89,6 +89,19 @@ def validate2():
 
 
 
+@app.route('/settings')
+def Settings():
+    # host='localhost'
+    # database='furniture'
+    # user='root'
+    # password='Singapore1'
+    host=os.environ['HOST2']
+    database=os.environ['DATABASE2']
+    user=os.environ['USERNAME2']
+    password=os.environ['PASSWORD2']
+    settings={"host":host,"username":username,"database":database}
+    return jsonify(settings)
+    
 
 if __name__ == '__main__':
     app.run(debug=True)
