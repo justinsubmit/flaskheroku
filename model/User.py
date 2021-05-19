@@ -1,4 +1,4 @@
-#from model.DatabasePool import DatabasePool
+from model.DatabasePool import DatabasePool
 from config.Settings import Settings
 import bcrypt
 import datetime
