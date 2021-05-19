@@ -19,6 +19,10 @@ class DatabasePool:
                                                   database=Settings.database,
                                                   user=Settings.user,
                                                   password=Settings.password)
+    print("Settings",Settings.host)   
+    print("Database",Settings.database)  
+    print("User",Settings.user)                                    
+    print("Password",Settings.password)  
 
     @classmethod
     def getConnection(cls):

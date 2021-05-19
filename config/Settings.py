@@ -11,5 +11,9 @@ class Settings:
     #Production
     host=os.environ['HOST']
     database=os.environ['DATABASE']
-    user=os.environ['USER']
+    user=os.environ['USERNAME']
     password=os.environ['PASSWORD']
+    print("host",host)
+    print("database",database)
+    print("username",username)
+    print("password",password)
