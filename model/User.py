@@ -3,8 +3,7 @@ from config.Settings import Settings
 import bcrypt
 import datetime
 import jwt
-
-# import bcrypt
+import bcrypt
 
 class User:
 
