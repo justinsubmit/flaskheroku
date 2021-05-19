@@ -1,14 +1,14 @@
 from flask import Flask,jsonify,request,g,render_template
-# import re
-# import bcrypt
+import re
+import bcrypt
 
-# from flask_cors import CORS
-# from model.User import User
-# from model.Category import Category
+from flask_cors import CORS
+from model.User import User
+from model.Category import Category
 
-# from model.Furniture import Furniture
+from model.Furniture import Furniture
 
-# from validation.Validator import *
+from validation.Validator import *
 
 app = Flask(__name__)
 
