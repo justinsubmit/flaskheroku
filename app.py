@@ -19,15 +19,26 @@ def validate2():
     database='furniture'
     user='root'
     password='Singapore1'
-    host=os.environ['HOST2']
-    database=os.environ['DATABASE2']
-    user=os.environ['USERNAME2']
-    password=os.environ['PASSWORD2']
+    # host=os.environ['HOST2']
+    # database=os.environ['DATABASE2']
+    # user=os.environ['USERNAME2']
+    # password=os.environ['PASSWORD2']
     host=os.environ['HOST']
     database=os.environ['DATABASE']
     user=os.environ['USERNAME']
     password=os.environ['PASSWORD']
-    print("host2",host)
+    # # print("host2",host)
+
+    #    connection_pool = pooling.MySQLConnectionPool(pool_name="ws_pool",
+    #                                               pool_size=5,
+    #                                               host=Settings.host,
+    #                                               database=Settings.database,
+    #                                               user=Settings.user,
+    #                                               password=Settings.password)
+    # print("host", Settings.host)
+    # print("database", Settings.database)
+    # print("password", Settings.password)
+    # print("user", Settings.user)
     connection_pool = pooling.MySQLConnectionPool(pool_name="ws_pool",
                                                   pool_size=5,
                                                   host=host,

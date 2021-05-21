@@ -4,6 +4,7 @@ from config.Settings import Settings
 
 
 
+
 class DatabasePool:
     #class variable
     # connection_pool = pooling.MySQLConnectionPool(pool_name="ws_pool",
