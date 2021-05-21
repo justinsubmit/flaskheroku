@@ -69,10 +69,10 @@ def Settings():
     # database='furniture'
     # user='root'
     # password='Singapore1'
-    host=os.environ['HOST2']
-    database=os.environ['DATABASE2']
-    user=os.environ['USERNAME2']
-    password=os.environ['PASSWORD2']
+    host=os.environ['HOST']
+    database=os.environ['DATABASE']
+    user=os.environ['USERNAME']
+    password=os.environ['PASSWORD']
     settings={"host":host,"username":user,"database":database}
     return jsonify(settings)
     
