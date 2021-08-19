@@ -14,6 +14,58 @@ app = Flask(__name__)
 
 CORS(app)
 # http://localhost:5000?data=test@test.com
+
+@app.route('/form')
+def form():
+    return render_template("form.html")
+
+@app.route('/formsubmit',methods=['GET'])
+def formsubmit():
+    print("formsubmit route")
+    # retrive post data
+    # email2 = request.form['email']
+    # password = request.form['password']
+    # retrieve get data
+    email2 = request.args.get('email')
+    password = request.args.get('password')
+    print("email",email2)
+    print("password",password)
+    return render_template("form.html",email=email2)    
+
+
+@app.route('/start')
+def start():
+    return render_template("start.html",message="something",arr=[1,2,3,4,5],mydictionary = {"data":"dictionary value"},arrofobj=[{"index":1, "data":"element 1"},{"index":2,"data":"element 2"},{"index":3,"data":"element 3"}])
+
+
+
+@app.route('/home')
+def home():
+#    return '''
+#    <html>
+#    <body>
+#      <h1>hello there
+#    </body>
+
+#    </html>
+
+#    '''
+    return render_template('mypage.html',message="something", obj = {"data":"this is my data"},arr= [1,2,4,5,6], arr2 = [{"data":"important data"}])
+    #  return render_template('login.html')
+
+@app.route('/mylogin', methods=['POST'])
+
+#@login_required
+def login():
+    print('login route')
+    email = request.form['email']
+    print("email",email)
+    password = request.form['password']
+    print("password",password)
+    return render_template('login.html',message="thanks for logging in")
+
+
+
 @app.route('/')
 def validate():
     data = request.args.get('data')

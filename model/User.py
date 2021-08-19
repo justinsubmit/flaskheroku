@@ -111,16 +111,16 @@ class User:
                 return {"jwt":""}
 
             else:
-                
+                print("success login")
                 password=userJSON["password"].encode()
                 hashed=user['password'].encode()
                 
-                if bcrypt.checkpw(password, hashed):#True means valid password 
-                    payload={"userid":user["userid"],"role":user["role"],"exp": datetime.datetime.utcnow() + datetime.timedelta(seconds=7200)}
+                # if bcrypt.checkpw(password, hashed):#True means valid password 
+                payload={"userid":user["userid"],"role":user["role"],"exp": datetime.datetime.utcnow() + datetime.timedelta(seconds=7200)}
 
-                    jwtToken=jwt.encode(payload,Settings.secretKey,algorithm="HS256")
-                    return {"jwt":jwtToken}
-                else:
-                    return {"jwt":""}
+                jwtToken=jwt.encode(payload,Settings.secretKey,algorithm="HS256")
+                return {"jwt":jwtToken}
+                # else:
+                #     return {"jwt":""}
         finally:
             dbConn.close()
